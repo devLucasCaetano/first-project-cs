@@ -45,7 +45,7 @@ void ShowMenuOption()
             break;
         case 3 : EvaluateBand();
             break;
-        case 4 : Console.WriteLine("op em construção");
+        case 4 : Console.WriteLine("opção em construção");
             break;
         default : Console.WriteLine("inválido camarada");
             break;
@@ -60,7 +60,7 @@ void RegisterBand()
     //bandsList.Add(bandName);
     registeredBands.Add(bandName, new List<int>());
     Console.WriteLine($"A banda {bandName} foi registrada com sucesso");
-    Thread.Sleep(5000);
+    Thread.Sleep(3500);
     Console.Clear();
     ShowMenuOption();
 }
@@ -74,9 +74,9 @@ void ShowBands()
     //{
     //    Console.WriteLine(bandsList[i]);
     //}
-    for ( int i = 0; i < registeredBands.Count; i++)
+    foreach (string band in registeredBands.Keys )
     {
-        Console.WriteLine($"{ registeredBands.Keys }");
+        Console.WriteLine($"{ band }");
     }
 
     Console.WriteLine("aperte qualquer tecla para retornar ao menu principal");
@@ -87,17 +87,16 @@ void ShowBands()
 
 void EvaluateBand()
 {
-    ShowBands();
     Console.Write("Digite o nome da banda que deseja avaliar: ");
     string bandName = Console.ReadLine()!;
 
     if( registeredBands.ContainsKey(bandName))
     {
-        Console.WriteLine("Qual nota deseja dar?: ");
+        Console.WriteLine($"Qual nota deseja dar para {bandName}?: ");
         int nota = int.Parse( Console.ReadLine()!);
         registeredBands[bandName].Add(nota);
         Console.WriteLine($"Nota {nota} dada à banda {bandName} \n ");
-        Thread.Sleep(2500);
+        Thread.Sleep(3000);
         Console.Clear();
         ShowMenuOption();
     }else
