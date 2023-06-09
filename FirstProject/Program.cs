@@ -1,4 +1,32 @@
 ﻿// screen sound Alura ! 
+InitializeProject();
+
+Music music1 = new Music();
+
+music1.Name = "Mind";
+music1.Autor = "Skrillex";
+music1.Time = 1;
+music1.Disponible = true; // intrinsicamente usa o set para escrita 
+//music1.WriteDisponibility(true);
+
+Music music2 = new Music();
+music2.Name = "Não quero vingança";
+music2.Autor = "Emicida";
+music2.Time = 2;
+music2.Disponible = false; // intrinsicamente usa o set para escrita 
+//music2.WriteDisponibility(false);
+
+Music music3 = new Music();
+music3.Name = "Aquela fé";
+music3.Autor = "Don L";
+music3.Time = 3;
+music3.Disponible = true; // intrinsicamente usa o set para escrita 
+//music3.WriteDisponibility(true);
+
+music1.ShowDatasheet();
+music2.ShowDatasheet();
+music3.ShowDatasheet();
+
 // List<string> bandsList = new List<string>();
 Dictionary<string, List<int>> registeredBands = new Dictionary<string, List<int>>();
 
@@ -10,20 +38,20 @@ List<string> menuOptions = new List<string>
     "4-Média de avaliação de uma banda",
     "0-Para Sair"
 };
-
-void ShowWelcomeMessage()
-{
-    string welcomeMessage = "* Seja muito bem vindo ao meu primeiro programa em C# *";
-    Console.WriteLine(welcomeMessage);
-}
-
 void InitializeProject()
 {
     ShowWelcomeMessage();
-    ShowMenuOption();
+    //ShowMenuOption();
 }
 
-void ShowMenuOption()
+
+void ShowWelcomeMessage()
+{
+    string welcomeMessage = "* Seja bem vindo ao meu primeiro programa em C# *";
+    Console.WriteLine(welcomeMessage);
+}
+
+/* void ShowMenuOption()
 {   
     Console.WriteLine("MENU:");
     foreach (string option in menuOptions)
@@ -108,5 +136,4 @@ void EvaluateBand()
     }
 
 }
-
-InitializeProject();
+*/
