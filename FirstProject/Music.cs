@@ -1,6 +1,6 @@
 ﻿class Music
 {
-    readonly int id;
+    readonly int _id;
     public string Name { get; set; }
     public string Autor { get; set; }
     public int Time { get; set; }
@@ -11,6 +11,8 @@
             return $"{Name} - {Autor}";
         }
     }
+    /*pode ser feito tbm o formato lambda ( ou arrow function)
+    public string Description => $"{Name} - {Autor}";*/
 
     //public void WriteDisponibility(bool valor)
     //{

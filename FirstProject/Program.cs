@@ -1,8 +1,28 @@
 ﻿// screen sound Alura ! 
 InitializeProject();
 
-Music music1 = new Music();
+Album albumDonL = new Album();
+albumDonL.Name = "Roteiro Para Ainouz II";
 
+Music music1 = new Music();
+music1.Name = "Vila rica";
+music1.Autor = "Don L";
+music1.Time = 2;
+music1.Disponible = true;
+
+albumDonL.AddMusicsInAlbum(music1);
+
+Music music2 = new Music();
+music2.Name = "A todo vapor";
+music2.Autor = "Don L";
+music2.Time = 2;
+music2.Disponible = true;
+
+albumDonL.AddMusicsInAlbum(music2);
+
+albumDonL.showAlbumMusics();
+
+/*
 music1.Name = "Mind";
 music1.Autor = "Skrillex";
 music1.Time = 1;
@@ -26,6 +46,7 @@ music3.Disponible = true; // intrinsicamente usa o set para escrita
 music1.ShowDatasheet();
 music2.ShowDatasheet();
 music3.ShowDatasheet();
+*/
 
 // List<string> bandsList = new List<string>();
 Dictionary<string, List<int>> registeredBands = new Dictionary<string, List<int>>();
